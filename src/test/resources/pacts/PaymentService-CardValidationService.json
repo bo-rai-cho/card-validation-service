@@ -1,0 +1,41 @@
+{
+    "provider": {
+        "name": "CardValidationService"
+    },
+    "consumer": {
+        "name": "PaymentService"
+    },
+    "interactions": [
+        {
+            "description": "card validation request",
+            "request": {
+                "method": "GET",
+                "path": "/card/5455031500000173"
+            },
+            "response": {
+                "status": 200,
+                "headers": {
+                    "Content-Type": "application/json"
+                },
+                "body": {
+                    "owner": "Batman",
+                    "cardNumber": 5455031500000173,
+                    "valid": true
+                }
+            },
+            "providerStates": [
+                {
+                    "name": "normal card"
+                }
+            ]
+        }
+    ],
+    "metadata": {
+        "pact-specification": {
+            "version": "3.0.0"
+        },
+        "pact-jvm": {
+            "version": "3.5.14"
+        }
+    }
+}
