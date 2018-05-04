@@ -28,8 +28,6 @@ import static org.springframework.http.ResponseEntity.ok;
 @EnableAutoConfiguration
 public class CardValidationServiceTest {
 
-    private static final Card TEST_CARD = new Card("Batman", 5455031500000176L, true);
-
     @TestTarget
     public final Target target = new HttpTarget(8090);
 
@@ -39,6 +37,6 @@ public class CardValidationServiceTest {
     @State("normal card")
     public void normalCard() {
 
-        when(cardValidationService.getValidationResult(anyLong())).thenReturn(ok(TEST_CARD));
+        when(cardValidationService.getValidationResult(anyLong())).thenReturn(ok(new Card("Batman", 5455031500000173L, true)));
     }
 }
