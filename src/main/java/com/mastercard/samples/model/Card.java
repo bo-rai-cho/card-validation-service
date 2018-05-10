@@ -12,6 +12,6 @@ public final class Card {
 
     private String owner;
     private Long cardNumber;
-    private Boolean active;
+    private Boolean valid;
 
 }
